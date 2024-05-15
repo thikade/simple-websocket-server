@@ -19,10 +19,12 @@ oc apply -k server/k8s/
 ## Verify websocket communication
 **Either run on your local machine...**
 ```
-$ python -m websockets wss://ws-echo-server.apps.epyc.***
-Connected to wss://ws-echo-server.apps.epyc.***.
-> hi secure
-< hi secure (from your K8s websocket-server :-)
+$ python -m websockets python -m websockets ws://ws-echo-server.apps.epyc.***
+
+Connected to ws://ws-echo-server.apps.epyc.***.
+> hello!
+< hello! (from your K8s websocket-server :-)
+Connection closed.
 ```
 
 
