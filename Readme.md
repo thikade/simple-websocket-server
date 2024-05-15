@@ -8,7 +8,9 @@
 ## Build
 Build the dockerfile and push to some registry. I used: 
 ```
-docker build server -t quay.io/thikade/ws-echo:latest  &&  docker push quay.io/thikade/ws-echo:latest
+# docker buildx build server -t quay.io/thikade/ws-echo:latest --push 
+
+docker buildx build server -t quay.io/thikade/ws-echo:latest  &&  docker push quay.io/thikade/ws-echo:latest
 ```
 
 ## Deploy
